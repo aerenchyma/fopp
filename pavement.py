@@ -10,7 +10,8 @@ import pkg_resources
 sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
-master_url = 'http://127.0.0.1:8000'
+#master_url = 'http://127.0.0.1:8000'
+master_url = 'https://si506f18.learningpython.today'
 master_app = 'runestone'
 serving_dir = "./build/fopp"
 dest = "../../static"
