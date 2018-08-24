@@ -10,10 +10,6 @@ import pkg_resources
 sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
-<<<<<<< HEAD
-#master_url = 'http://127.0.0.1:8000'
-master_url = 'https://si506f18.learningpython.today'
-=======
 hostname = socket.gethostname()
 if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
     master_url = 'https://runestone.academy'
@@ -21,11 +17,13 @@ elif hostname == 'fopp.learningpython.today':
     master_url = 'https://fopp.learningpython.today'
 else:
     master_url = 'http://127.0.0.1:8000'
+    master_url = 'si506f18.learningpython.today' # for F18
 
->>>>>>> master-jczetta
 master_app = 'runestone'
 serving_dir = "./build/fopp"
 dest = "../../static"
+
+
 
 options(
     sphinx = Bunch(docroot=".",),
