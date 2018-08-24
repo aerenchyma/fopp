@@ -7,6 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+:skipreading:`True`
+
 .. qnum::
    :prefix: iter-11-
    :start: 1
@@ -39,15 +41,6 @@ Exercises
     .. actex:: ex6_11_2
 
         Get the user to enter some text and print it out in reverse order.
-        ~~~~
-
-.. question:: q6_11_3
-
-
-    .. actex:: ex6_11_3
-
-        Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
-        some of your code from the last question. The == operator compares two values to see if they are the same)
         ~~~~
 
 .. question:: iter_ex_3
@@ -150,5 +143,33 @@ Exercises
                 :shortname: interactivepython
                 :identifier: a7e34946f59f348f2bfeb3f918eb57b7a
 
+.. question:: iter_ex_8
+
+   .. parsonsprob:: pp_3_8
+
+      Write a program that will go through a list of temperatures and print them out to the user.
+      -----
+      temperatures = [-3, 78, 95, 28, 56, 42, 56, 81, -10, -]
+      =====
+      for temp in temperatures:
+      =====
+          print("The weather outside is: " + str(temp))
+
+.. question:: iter_ex_9
+
+   .. parsonsprob:: pp_3_9
+
+      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted.
+      -----
+      students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
+      =====
+      num_students = 0
+      =====
+      for student in students:
+      =====
+          print("Welcome to class, " + student)
+      =====
+          num_students += 1
+          print(str(num_students) + "student(s) have entered the classroom")
 
 
