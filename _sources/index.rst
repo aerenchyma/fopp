@@ -25,7 +25,7 @@
    :modal:
    :modalTitle: About this Project
 
-   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project. 
+   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project.
 
    * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers
    * Activecode based on `Skulpt <http://skulpt.org>`_
@@ -44,15 +44,11 @@
 Table of Contents
 :::::::::::::::::
 
-.. raw:: html
-
-   <ul>
-   <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
-   </ul>
+<strong>To access assignments in this book, click on their Canvas links.</strong>
 
 .. toctree::
    :numbered:
-   :maxdepth: 4 
+   :maxdepth: 4
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
@@ -76,8 +72,8 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
-   
+   AdvancedAccumulation/toctree.rst
+
 
 Appendices
 ::::::::::
