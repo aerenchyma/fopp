@@ -85,15 +85,11 @@ Appendices
    Appendices/errorsAndDebug.rst
    Appendices/PrecedenceTable.rst
 
-.. ignore
-  :maxdepth: 1
-  AssignmentSources/week01.rst
-  AssignmentSources/week02.rst
-  AssignmentSources/week03.rst
-  AssignmentSources/week04.rst
-  AssignmentSources/week05.rst
-  AssignmentSources/week06.rst
-  AssignmentSources/week07.rst
+Assignment Sources
+::::::::::::::::::
+
+AssignmentSources/toctree.rst
+
 
 Acknowledgements
 ::::::::::::::::
