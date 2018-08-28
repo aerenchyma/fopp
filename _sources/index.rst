@@ -44,7 +44,7 @@
 Table of Contents
 :::::::::::::::::
 
-<strong>To access assignments in this book, click on their Canvas links.</strong>
+**To access assignments in this book, click on their Canvas links.**
 
 .. toctree::
    :numbered:
