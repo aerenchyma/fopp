@@ -85,10 +85,8 @@ Appendices
    Appendices/errorsAndDebug.rst
    Appendices/PrecedenceTable.rst
 
-Assignment Sources
-::::::::::::::::::
 
-AssignmentSources/toctree.rst
+
 
 
 Acknowledgements
@@ -111,3 +109,12 @@ Index and Search
 
 * :ref:`genindex`
 * :ref:`search`
+
+Supporting Material
+:::::::::::::::::::
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+
+   AssignmentSources/toctree.rst
