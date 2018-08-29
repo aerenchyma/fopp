@@ -277,3 +277,69 @@ Problem Set
          self.assertEqual(acc_num, 3, "Testing that acc_num has been set to the number of strings that have 'w' in them.")
 
    myTests().main()
+
+.. activecode:: ps_2_errors
+    :language: python
+    :autograde: unittest
+
+    Below is code that has a number of errors in it, and it definitely doesn't pass all the tests. Use your debugging strategies to fix the code up so that ALL the tests pass and the code runs without errors.
+    ~~~~
+    y = 1
+    z = 2
+    x = print(y+z)
+    y = "greetings to "
+    nm = "jamie"
+    truth = 'they are number
+    numb = 1
+    sent = y + nm + " " + truth + numb
+    print(sent)
+    para = """haikus are great
+    sometimes they don't make sense
+    fridge"""
+    print(para)
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+     def testOne(self):
+        self.assertEqual(x,3,"Testing that x equals 3")
+     def testTwo(self):
+        self.assertEqual(sent, "greetings to jamie they are number 1", "Testing that the value of sent is correct")
+     def testThree(self):
+        self.assertEqual(sent.split("\n")[-1],"refrigerator", "Testing the contents of the string saved in the variable para")
+
+    myTests().main()
+
+
+.. activecode:: ps_2_codeblocks
+    :language: python
+    :autograde: unittest
+
+    This problem has a couple steps. First, *using selection* and the variable values that are available to you here, assign the string `"welcome to our class"` to a variable called `a_phrase`.
+
+    Second, use a **string method** so that you can iterate over the *words* in the `a_phrase` value.
+
+    Your goal is to print out output as follows:
+
+    ``welcome!
+    to!
+    our!
+    class!``
+    ~~~~
+    here_a_lst = ["hi","welcome to our class", 24, 201, "yes"]
+
+
+    =====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+     def testOne(self):
+        self.assertIn("welcome!\nto!\nour!\nclass!",self.getOutput())
+
+    myTests().main()
