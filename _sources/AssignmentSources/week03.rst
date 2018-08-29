@@ -310,7 +310,7 @@ Problem Set
      def testTwo(self):
         self.assertEqual(sent, "greetings to jamie they are number 1", "Testing that the value of sent is correct")
      def testThree(self):
-        self.assertEqual(sent.split("\n")[-1],"refrigerator", "Testing the contents of the string saved in the variable para")
+        self.assertEqual(para.split("\n")[-1],"refrigerator", "Testing the contents of the string saved in the variable para")
 
     myTests().main()
 
