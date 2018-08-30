@@ -17,7 +17,7 @@ elif hostname == 'fopp.learningpython.today':
     master_url = 'https://fopp.learningpython.today'
 else:
     master_url = 'http://127.0.0.1:8000'
-    master_url = 'http://si506f18.learningpython.today' # for F18
+    master_url = 'https://si506f18.learningpython.today' # for F18
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
