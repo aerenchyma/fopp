@@ -25,7 +25,7 @@
    :modal:
    :modalTitle: About this Project
 
-   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project. 
+   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project.
 
    * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers, the Interactive edition of `How to Think Like a Computer Scientist <https://runestone.academy/runstone/static/thinkcspy/index.html>`_ by Brad Miller, David Ranum and many more and `Programs Information and People <https://runestone.academy/runestone/static/pip2/index.html>`_ by Paul Resnick
    * Activecode based on `Skulpt <http://skulpt.org>`_
@@ -46,18 +46,16 @@ Table of Contents
 
 .. raw:: html
 
-   <ul>
-   <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
-   </ul>
+   <b>To see specific reading assignments in this book, access the reading assignments through Canvas links!</b>
 
 .. toctree::
     :maxdepth: 1
-    
+
     FrontBackMatter/preface.rst
 
 .. toctree::
    :numbered:
-   :maxdepth: 4 
+   :maxdepth: 4
 
    GeneralIntro/toctree.rst
    SimplePythonData/toctree.rst
@@ -81,8 +79,8 @@ Table of Contents
    Classes/toctree.rst
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
-   AdvancedAccumulation/toctree.rst 
-   
+   AdvancedAccumulation/toctree.rst
+
 
 Appendices
 ::::::::::
