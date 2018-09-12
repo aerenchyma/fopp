@@ -323,12 +323,13 @@ Problem Set
 
     Second, use a **string method** so that you can iterate over the *words* in the `a_phrase` value.
 
-    Your goal is to print out output as follows:
+    Your goal is to print out output as follows::
 
-    ``welcome!
-    to!
-    our!
-    class!``
+        welcome!
+        to!
+        our!
+        class!
+
     ~~~~
     here_a_lst = ["hi","welcome to our class", 24, 201, "yes"]
 
