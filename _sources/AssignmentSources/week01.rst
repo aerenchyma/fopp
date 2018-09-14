@@ -174,6 +174,20 @@ Problem Set
 
     from unittest.gui import TestCaseGui
 
+    def square(num):
+        return num**2
+
+    def greeting(st):
+        st = str(st) # just in case
+        return "Hello, " + st
+
+    def random_digit():
+        import random
+        return random.choice([0,1,2,3,4,5,6,7,8,9])
+
+    def add_lengths(str1, str2):
+        return len(str1) + len(str2)
+
     class myTests(TestCaseGui):
 
         def testOne(self):
