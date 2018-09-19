@@ -110,6 +110,7 @@ Problem Set
        self.assertIn("well spring", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
        self.assertIn("4 seasons", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
        self.assertIn("23 345", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+       self.assertTrue('nd["well"]' in self.getEditorText() or "nd['well']" in self.getEditorText(), "Testing output (Don't worry about actual and expected values.)")
 
    myTests().main()
 
