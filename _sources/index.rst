@@ -80,6 +80,7 @@ Table of Contents
    BuildingPrograms/toctree.rst
    Inheritance/toctree.rst
    AdvancedAccumulation/toctree.rst
+   InternetAPIs/toctree.rst
 
 
 Appendices
