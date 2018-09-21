@@ -12,7 +12,7 @@ Fetching a page
 
 The web works with a metaphor of "pages". When you put a URL into a browser, you see a "page" of content.
 
-For example, if you visit `<https://github.com/RunestoneInteractive/runestone>`_, you will see the home page for the open source project whose contents are used to run this online textbook.
+For example, if you visit `<https://github.com/RunestoneInteractive/runestoneserver>`_, you will see the home page for the open source project whose contents are used to run this online textbook.
 
 The browser is just a computer program that fetches the contents and displays them in a nice way. If you want to see what the contents are, in plain text, right click your mouse on the page and select ``View source``, or whatever the equivalent is in your browser.
 
@@ -31,5 +31,5 @@ Note that you must save this code in a program file of your own and run it on yo
 
    import requests
 
-   page = requests.get("https://github.com/RunestoneInteractive/runestone")
+   page = requests.get("https://github.com/RunestoneInteractive/runestoneserver")
    print(page.text[:1000])

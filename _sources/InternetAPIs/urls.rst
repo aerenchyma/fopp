@@ -27,7 +27,7 @@ The *:port* is optional. If it is omitted, the default port number is 80. The po
 
 The */path* is also optional. It specifies something about which page, or more generally which contents, are being requested.
 
-For example, consider the url https://github.com/presnick/runestone:
+For example, consider the url https://github.com/RunestoneInteractive/runestoneserver:
 
 * https:// says to use the secure http protocol
 
@@ -35,9 +35,8 @@ For example, consider the url https://github.com/presnick/runestone:
 
 * /presnick/runestone says to ask the remote server for the page presnick/runestone. It is up to the remote server to decide how to map that to the contents of a file it has access to, or to some content that it generates on the fly.
 
-The url http://blueserver.com/path?k=val is another example that we can consider. The path here a bit different 
-from https://github.com/presnick/runestone because of how we ask for a specific page. Here the path is structured 
+The url http://blueserver.com/path?k=val is another example that we can consider. The path here a bit different
+from https://github.com/presnick/runestone because of how we ask for a specific page. Here the path is structured
 similar to how we assign values of variables.
 
 .. image:: Figures/internet_requests.png
-
