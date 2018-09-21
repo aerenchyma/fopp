@@ -21,7 +21,7 @@ You don't need to use a browser to fetch the contents of a page, though.
 Fetching in python with requests.get
 ------------------------------------
 
-In Python, there's a module available, called ``requests``. You can use the get function in the ``requests`` module to fetch the contents of a page.
+In Python, there's a module available, called ``requests``. You can use the ``get`` function in the ``requests`` module (AKA ``requests.get``) to fetch all the contents of a web page!
 
 Here, the code is only printing the first 1000 characters. It turns out that somewhere later on the page there is an ellipsis character (a single character representing an ellipsis ``...``). If we try to print out the whole contents, we get an error. (You'll learn a little bit more about handling unicode characters in another chapter.) For now, if you try this code, just extract the first 1000 characters when printing it out.
 
