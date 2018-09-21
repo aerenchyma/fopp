@@ -31,5 +31,5 @@ Note that you must save this code in a program file of your own and run it on yo
 
    import requests
 
-   page = requests.get("https://github.com/presnick/runestone")
+   page = requests.get("https://github.com/RunestoneInteractive/runestone")
    print(page.text[:1000])
