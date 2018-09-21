@@ -27,6 +27,8 @@ Here, the code is only printing the first 1000 characters. It turns out that som
 
 Note that you must save this code in a program file of your own and run it on your own machine, because it relies on the ``requests`` external Python module being installed!
 
+In some versions of Python (for example, Anaconda), this module is pre-installed. In others, you'll need to have installed it yourself to your version of Python.
+
 .. sourcecode:: python
 
    import requests
