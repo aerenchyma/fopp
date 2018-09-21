@@ -83,7 +83,7 @@ The ``.text`` attribute we have seen before. It contains the contents of the fil
 
 The ``.history`` attribute contains a list of previous responses, if there were redirects. That list is empty, except for page3. For page3, we are able to see what happened in the original request: what the url was and the response code of 301.
 
-To summarize, a Request object has the following useful attributes that can be accessed in your program:
+To summarize, a ``Response`` object has the following useful attributes that can be accessed in your program:
 
     * .text
     * .url

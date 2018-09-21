@@ -1,4 +1,4 @@
-..  Copyright (C)  Paul Resnick.  Permission is granted to copy, distribute
+..  Copyright (C)  Paul Resnick, Lauren Murphy.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
     License, Version 1.3 or any later version published by the Free Software
     Foundation; with Invariant Sections being Forward, Prefaces, and
@@ -24,7 +24,7 @@ We will first need to write our import statements, so that we have access to the
 
 At this point, we look to our documentation to find out what the base of the url will be as well as what parameters are neeed to construct the request. In the `Searching <https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searching>`_ section of the documentation, we can see that the url should be in the form of ``https://itunes.apple.com/search?parameterkeyvalue`` so we know the base url should be ``https://itunes.apple.com/search``. To determine what parameters are necessary, we can look at the table to learn what parameter keys are available, as well as get a description of the paramter, if it is required, and what values can be passed through it.
 
-``term`` is a required parameter with no default value, so we'll have to provide that. 
+``term`` is a required parameter with no default value, so we'll have to provide that.
 
 .. fillintheblank:: question400_9_1
 
@@ -33,7 +33,7 @@ At this point, we look to our documentation to find out what the base of the url
    .. sourcecode:: python
 
     import requests
-    import json 
+    import json
 
     params = {"term":        }
 
@@ -55,14 +55,14 @@ We also want to make sure that we're searching for podcasts.
       :podcast: No, podcast is the value, not the parameter
       :.*: Incorrect, try again. Look at the iTunes documentation
 
-Note that both entity *and* media are parameters we can use for this task. Entity can be more specific though, so you may need to use that in other situations! 
+Note that both ``entity`` *and* ``media`` are parameters we can use for this task. ``entity`` can be more specific, though, so you may need to use that in other situations!
 
 Now, our code can now make a request to the iTunes API:
 
 .. sourcecode:: python
 
     import requests
-    import json 
+    import json
 
     parameters = {"term": "Ann Arbor", "entity": "podcast"}
     iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
@@ -73,61 +73,16 @@ In the textbook, this first step would look like this:
     :include: ac400_11_3
 
     parameters = {"term": "Ann Arbor", "entity": "podcast"}
-    iTunes_response = get("https://itunes.apple.com/search", params = parameters)    
+    iTunes_response = get("https://itunes.apple.com/search", params = parameters)
 
-All that is left to do is to convert the JSON response to a python object, and we'll be all set to work with the data we have retreived:
+All that is left to do is to convert the JSON response to a python object, and we'll be all set to work with the data we have retrieved, which will be saved in the variable ``py_data``:
 
 .. sourcecode:: python
 
     import requests
-    import json 
+    import json
 
     parameters = {"term": "Ann Arbor", "entity": "podcast"}
-    iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
+    itunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
 
-    py_data = json.loads(iTunes_response.text)
-
-Remember though, that we don't have json implemeted yet, so we can't convert the data into a python object just yet.
-
-.. activecode:: ac400_11_3
-    :hidecode:
-
-    from urllib.request import urlopen
-
-    class Response:
-
-        def __init__(self, data, url):
-            self.text = data
-            self.url = url
-
-        def __str__(self):
-            return "A response object for the following request: {}".format(self.url)
-
-
-    def requestURL(baseurl, params = {}):
-        if len(params) == 0:
-            return baseurl
-        complete_url = baseurl + "?"
-        pairs = [str(pair) + "=" + str(params[pair]).replace(" ", "+") for pair in params]
-        complete_url += "&".join(pairs)
-        return complete_url
-
-    def get(baseurl, params = {}):
-        user_req = requestURL(baseurl, params)
-        data = urlopen(user_req)
-        text_data = data.read().strip()
-        if len(text_data) > 0:
-            user_resp_obj = Response(text_data, user_req)
-            return user_resp_obj
-        else:
-            # Right now I'm returning a string because 
-            # when I have this activecode window included 
-            # in the windows above, it will not pass on the 
-            # exception, and instead say that there is a 
-            # problem in another window. Not sure what the best
-            # way around that is.
-
-
-            return "requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl)
-            #raise Exception("requests.exceptions.ConnectionError: HTTPConnectionPool(host='{}', port=80): Max retries exceeded with url: /bat?key=val (Caused by <class 'socket.gaierror'>: [Errno 11004] getaddrinfo failed)".format(baseurl))
-
+    py_data = json.loads(itunes_response.text)

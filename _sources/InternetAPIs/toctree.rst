@@ -19,7 +19,4 @@ Internet APIs
    iTunes.rst
    flickr.rst
    unicode.rst
-   cachingResponses.rst
    cachingPattern.rst
-
-   
