@@ -62,18 +62,6 @@ Now you try it. Use ``requests.get()`` and/or ``requestURL()`` to generate the f
 
 Note that we don't have access to a full version of the requests module in the browser environment. If you would like to work with the full version - which lets you access the status_code, headers, and history attributes - you'll have to try this on your own local computer.
 
-Here's an example of a request to the iTunes API for songs by the artist **Kendrick Lamar** that you can try to run as well -- this may not work as expected, but you can fix it (or make it work more like you hope) with a small change!
-
-Later, you'll dive into exploring and understanding API documentation to make various requests of your own.
-
-.. code:: python
-
-  obj = get("https://itunes.apple.com/search", params = {"term": "Kendrick Lmr", 'limit': 10})
-  print(obj)
-  print(obj.url)
-  print(obj.text)
-
-
 **Check your understanding**
 
 .. mchoice:: question400_5_1
