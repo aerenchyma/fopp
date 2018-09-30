@@ -183,7 +183,7 @@ You may find it helpful to run this program in order to understand it. It will t
 
   Note that this code does NOT work completely -- because you are building some of the pieces of it! You may want to run it a few times and thinking about what it's missing.
 
-  Because one of the pieces missing is the piece that allows the game to be won, your options for making this code stop running are to lose OR to refresh the page.
+  Because one of the pieces missing is the piece that allows the game to be won (oh no!), your options for making this code stop running are to lose on purpose, OR to wait thirty seconds for the time limit on the game to be over.
   ~~~~
   def blanked(word, guesses):
       return "blanked word" # Placeholder
