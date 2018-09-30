@@ -43,6 +43,16 @@ Problem Set
 -----------
 .. _problem_set_4:
 
+.. activecode:: ex_while_ps5
+   :language: python
+
+   Write code, using a ``while`` loop, that will continually accept input from the user and print it out, until the user types ``quit``. Your code should NOT print out ``quit``.
+
+   Note that there is more than 1 way to make this work, but there are NOT tests for it, because we cannot test user input without humans. To see if it works, you'll have to check your own work. If you create an infinite loop or another error, just refresh the page!
+
+   ~~~~
+   # Write your code here!
+
 .. activecode:: ps_3_02
    :language: python
 
