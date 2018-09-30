@@ -117,14 +117,17 @@ Problem Set
 
 
    # Here's a couple example function calls, printing the return value
-   # to show you what it is.
+   # to show you what it is. These are NOT the same as the tests, they are
+   # just example invocations that you can check out and play around with!
+   # Feel free to add more examples of your own to try out the definition
+   # you have written.
+   # Note that these will NOT work until you have already defined an is_prefix function
    print(is_prefix("He","Hello")) # should print True
    print(is_prefix("Hello","He")) # should print False
    print(is_prefix("Hi","Hello")) # should print False
    print(is_prefix("lo","Hello")) # should print False
    print(is_prefix("Hel","Hello")) # should print True
    print(is_prefix("Hello","Hello")) # should print True
-   # Remember, these won't work at all until you have defined a function called is_prefix
 
    =====
 
@@ -146,6 +149,9 @@ Problem Set
          self.assertEqual(is_prefix("big","Bigger"),False,"Testing whether 'big' is a prefix of 'Bigger'")
       def testSeven(self):
          self.assertEqual(is_prefix("Biggerxyz","Bigger"),False,"Testing whether 'Biggerxyz' is a prefix of 'Bigger'")
+      def testEight(self):
+         self.assertEqual(is_prefix("B","Bigger"),True, "Testing whether 'B' is a prefix of 'Bigger'")
+
 
    myTests().main()
 
@@ -163,7 +169,11 @@ You may find it helpful to run this program in order to understand it. It will t
 .. activecode:: ps_4_hangman_code
   :hidecode:
 
-  **The next few questions are based on this code/set of ideas.** This is the base code for a Hangman game, without some of the important useful functionality, as you'll be building it! (If you have never played Hangman, you can go to ``https://en.wikipedia.org/wiki/Hangman_(game)`` for an explanation of what it is.) There is (or will be) a flow chart image of the process of this code also available, which may be helpful to refer to as you try to understand the code.
+  **The next few questions are based on this code/set of ideas.** This is the base code for a Hangman game, without some of the important useful functionality, as you'll be building it! (If you have never played Hangman, you can go to ``https://en.wikipedia.org/wiki/Hangman_(game)`` for an explanation of what it is.) There is a flow chart image of the process of this code also available, which may be helpful to refer to as you try to understand the code.
+
+  Note that this code does NOT work completely -- because you are building some of the pieces of it! You may want to run it a few times and thinking about what it's missing.
+
+  Because one of the pieces missing is the piece that allows the game to be won, your options for making this code stop running are to lose OR to refresh the page.
   ~~~~
   def blanked(word, guesses):
       return "blanked word" # Placeholder
@@ -221,9 +231,11 @@ You may find it helpful to run this program in order to understand it. It will t
       print(feedback)
       print("The word was..." + secret_word)
 
-  import sys #don't worry about this line; you'll understand it next week
-  sys.setExecutionLimit(60000)     # let the game take up to a minute, 60 * 1000 milliseconds
+  import sys #don't worry about this line for now
+  sys.setExecutionLimit(30000)     # let the game take up to half a minute, 30 * 1000 milliseconds
   main() # invoke the main() game function
+
+
 
 See the flow chart below for a better understanding of what's happening in the code for the Hangman game overall. Your first task is just to understand the logic of the program, by matching up elements of the flow chart above with single numeric lines of the code below (which line of code corresponds to the box?). Answer in comments, below. **Each answer should be no more than 2 numbers that represent lines of code. Each question can be answered with 1 or 2 line numbers!**
 
@@ -260,7 +272,7 @@ In later problems, you'll fill in a few details that aren't fully implemented in
    :language: python
    :autograde: unittest
 
-   The next task you have is to create a correct version of the ``blanked`` function. It should take 2 inputs: a word, and a string of the letters that have been guessed already.
+   The next task you have is to create a correct version of the ``blanked`` function from the Hangman game. It should take 2 inputs: a word, and a string of the letters that have been guessed already.
 
    It should return a string with the same number of characters as the word, but with the UNrevealed characters replaced by an underscore (a ``_``).
 
@@ -330,7 +342,7 @@ In later problems, you'll fill in a few details that aren't fully implemented in
 
     myTests().main()
 
-In class, you'll see these things all put together. Soon, you'll put these together yourself and run your completed hangman program on your own computer, instead of in the textbook.
+In class, you'll see these things all put together. Soon, you'll put these together yourself and run your completed hangman program yourself.
 
 To run the whole program, with the functions you built in questions above, paste the ``health_prompt`` function and the ``blanked`` function at the very top of the code box provided below:
 
