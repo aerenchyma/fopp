@@ -56,9 +56,9 @@ You'll need to:
 
 * Try to read the contents of that file into a string.
 
-* Try to load the data in the contents of that file into a Python object, and save that data in a variable (we use ``_cache_diction``), which will be global for the entire program, so that you can access the cached data anytime later.
+* Try to load the data in the contents of that file into a Python object, and save that data in a variable (we use ``CACHE_DICTION``), which will be global for the entire program, so that you can access the cached data anytime later.
 
-* If any one of those things doesn't work, create a variable (again, ``_cache_diction``) to hold the data you'll be caching during the program.
+* If any one of those things doesn't work, create a variable (again, ``CACHE_DICTION``) to hold the data you'll be caching during the program.
 
 During the program, you'll add key-value pairs to it... and each time, you'll dump the dictionary to a JSON-formatted string and save that string to a file with the ``CACHE_FNAME`` name.
 
@@ -144,8 +144,8 @@ Otherwise, if the unique identifier is *not* in the cache dictionary yet, that's
 
 * Make a request to the internet, using the base url and the params dictionary with ``requests.get``, and get a resopnse back. P
 * Pull the text data out of that response, and load it into a Python object.
-* Add a key-value pair to the ``_cache_diction`` cache dictionary, where the key is the unique identifier string representing the request, and the value is that Python object that represents the data you got back from the request.
-* Dump the *whole* ``_cache_diction`` cache dictionary to a string.
+* Add a key-value pair to the ``CACHE_DICTION`` cache dictionary, where the key is the unique identifier string representing the request, and the value is that Python object that represents the data you got back from the request.
+* Dump the *whole* ``CACHE_DICTION`` cache dictionary to a string.
 * Open the ``CACHE_FNAME`` file for *writing* and write the string version of the cache dictionary to that file. Then, close the file.
 * Return the data (or manipulate it in some way to return what you want)
 
@@ -158,16 +158,16 @@ Here's an example of such a function:
         params_diction = {}
         params_diction["rel_rhy"] = rhymes_with
         unique_ident = params_unique_combination(baseurl,params_diction)
-        if unique_ident in _cache_diction:
-            return _cache_diction[unique_ident]
+        if unique_ident in CACHE_DICTION:
+            return CACHE_DICTION[unique_ident]
         else:
             resp = requests.get(baseurl, params_diction)
-            _cache_diction[unique_ident] = json.loads(resp.text)
-            dumped_json_cache = json.dumps(_cache_diction)
+            CACHE_DICTION[unique_ident] = json.loads(resp.text)
+            dumped_json_cache = json.dumps(CACHE_DICTION)
             fw = open(CACHE_FNAME,"w")
             fw.write(dumped_json_cache)
             fw.close() # Close the open file
-            return _cache_diction[unique_ident]
+            return CACHE_DICTION[unique_ident]
 
 
 The same way you can write a function to get data from many REST APIs using the function structure you've seen before, you can write functions to get and cache data by following this pattern.
