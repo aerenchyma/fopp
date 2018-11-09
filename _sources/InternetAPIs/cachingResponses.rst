@@ -57,10 +57,10 @@ Below is an example of the caching pattern setup and a function that uses the ca
     try:
         cache_file = open(CACHE_FNAME, 'r')
         cache_contents = cache_file.read()
-        _cache_diction = json.loads(cache_contents)
+        CACHE_DICTION = json.loads(cache_contents)
         cache_file.close()
     except: # But if anything doesn't work,
-        _cache_diction = {}
+        CACHE_DICTION = {}
 
     # A helper function that accepts 3 parameters, 2 required, and returns a string that uniquely represents the request that could be made with this info
     def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
@@ -77,16 +77,16 @@ Below is an example of the caching pattern setup and a function that uses the ca
         params_diction = {}
         params_diction["rel_rhy"] = rhymes_with
         unique_ident = params_unique_combination(baseurl,params_diction)
-        if unique_ident in _cache_diction:
+        if unique_ident in CACHE_DICTION:
             print("Getting cached data...")
-            return _cache_diction[unique_ident]
+            return CACHE_DICTION[unique_ident]
         else:
             print("Making a request for new data...")
             # Make the request and cache the new data
             resp = requests.get(baseurl, params_diction)
-            _cache_diction[unique_ident] = json.loads(resp.text)
-            dumped_json_cache = json.dumps(_cache_diction)
+            CACHE_DICTION[unique_ident] = json.loads(resp.text)
+            dumped_json_cache = json.dumps(CACHE_DICTION)
             fw = open(CACHE_FNAME,"w")
             fw.write(dumped_json_cache)
             fw.close() # Close the open file
-            return _cache_diction[unique_ident]
+            return CACHE_DICTION[unique_ident]
